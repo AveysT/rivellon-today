@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://AveysT.github.io/Grumpy-Dwarf-News",
+  "homepage": "https://AveysT.github.io/rivellon-today",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
