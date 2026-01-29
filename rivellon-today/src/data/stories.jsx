@@ -6,7 +6,7 @@ export const stories = [
         title: "Ni duermen ni dejan dormir",
         date: "27 de Enero, 2026",
         excerpt: "Crónica de un despertar que nadie pidió",
-        video: "/videos/01.mp4",
+        video: `${import.meta.env.BASE_URL}videos/01.mp4`,
         content: (
             <>
                 <p>
