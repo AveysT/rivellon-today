@@ -1,0 +1,6 @@
+@echo off
+echo Setting up environment for Rivellon Today...
+set "PATH=%PATH%;C:\Program Files\nodejs"
+echo Starting Development Server...
+npm run dev
+pause

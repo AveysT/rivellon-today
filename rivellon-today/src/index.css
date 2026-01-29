@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-rivellon-bg text-ink antialiased font-serif;
+    /* Fallback if image not loaded, or use a noise texture */
+    background-image: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-bold tracking-wide text-gold-light;
+  }
+}
+
+@layer utilities {
+  .divinity-border {
+    @apply border-2 border-gold-dark;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    position: relative;
+  }
+
+  .divinity-border::after {
+    content: '';
+    @apply absolute inset-[3px] border border-gold-dark/50 pointer-events-none;
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(197, 160, 89, 0.3);
+  }
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-rivellon-panel;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-dark/50 hover:bg-gold-dark rounded border border-rivellon-panel;
+}
