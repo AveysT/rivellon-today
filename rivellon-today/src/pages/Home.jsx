@@ -4,19 +4,6 @@ import { Feather } from 'lucide-react';
 import { stories } from '../data/stories';
 
 export const Home = () => {
-    // Group stories by date
-    const groupedStories = stories.reduce((groups, story) => {
-        const date = story.date;
-        if (!groups[date]) {
-            groups[date] = [];
-        }
-        groups[date].push(story);
-        return groups;
-    }, {});
-
-    // Extract unique dates preserving order from the source array
-    const uniqueDates = [...new Set(stories.map(s => s.date))];
-
     return (
         <div className="space-y-12">
             <div className="text-center italic text-gold-dark/80 font-serif mb-8 border-b border-gold-dark/20 pb-4">
@@ -24,51 +11,41 @@ export const Home = () => {
             </div>
 
             <div className="grid gap-12">
-                {uniqueDates.map((date) => {
-                    const dayStories = groupedStories[date];
-                    const storyCount = dayStories.length;
-                    const dateSlug = date.toLowerCase().replace(/,/g, '').replace(/\s+/g, '-');
-
-                    return (
-                        <article key={date} className="group relative bg-rivellon-panel p-8 shadow-lg transition-all hover:bg-black/40 divinity-border">
-                            <Link to={`/edition/${dateSlug}`} className="block">
-                                <header className="mb-4 text-center">
-                                    <div className="flex items-center justify-center gap-2 text-blood-bright text-xs font-bold uppercase tracking-wider mb-2 font-serif">
-                                        <Feather className="w-3 h-3" />
-                                        <span>Edición Semanal</span>
-                                        <Feather className="w-3 h-3 -scale-x-100" />
+                {stories.map((story) => (
+                    <article key={story.id} className="group relative bg-rivellon-panel p-8 shadow-lg transition-all hover:bg-black/40 divinity-border">
+                        <Link to={`/story/${story.id}`} className="block">
+                            <header className="mb-4">
+                                {story.video && (
+                                    <div className="mb-6 overflow-hidden rounded border border-gold-dark/30 shadow-md">
+                                        <video
+                                            src={story.video}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                        />
                                     </div>
-                                    <h2 className="text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold to-gold-dark mb-4 group-hover:drop-shadow-[0_0_8px_rgba(197,160,89,0.5)] transition-all duration-300">
-                                        {date}
-                                    </h2>
-
-                                    <div className="text-lg text-ink-muted italic font-serif border-y border-gold-dark/30 py-4 my-6">
-                                        {storyCount} {storyCount === 1 ? 'Crónica' : 'Crónicas'} disponibles en esta edición
-                                    </div>
-                                </header>
-
-                                {/* Mini preview of headlines */}
-                                <div className="space-y-3 mb-8">
-                                    {dayStories.slice(0, 3).map((story, idx) => (
-                                        <div key={story.id} className="flex items-start gap-2 text-ink/80">
-                                            <span className="text-gold-dark font-bold">RP {idx + 1}.</span>
-                                            <span className="font-serif group-hover:text-gold-light transition-colors text-left">{story.title}</span>
-                                        </div>
-                                    ))}
-                                    {storyCount > 3 && (
-                                        <div className="text-xs text-center text-gold-dark/60 italic pt-2">
-                                            ... y {storyCount - 3} más
-                                        </div>
-                                    )}
+                                )}
+                                <div className="flex items-center gap-2 text-blood-bright text-xs font-bold uppercase tracking-wider mb-2 font-serif">
+                                    <Feather className="w-3 h-3" />
+                                    <span>{story.date}</span>
                                 </div>
+                                <h2 className="text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold to-gold-dark mb-4 group-hover:drop-shadow-[0_0_8px_rgba(197,160,89,0.5)] transition-all duration-300">
+                                    {story.title}
+                                </h2>
 
-                                <div className="text-gold font-serif text-sm mt-4 uppercase tracking-widest font-bold flex items-center justify-center gap-2 group-hover:scale-105 transition-transform bg-black/20 py-3 rounded border border-gold-dark/20 text-center">
-                                    Leer Todas las Crónicas del Día
+                                <div className="text-lg text-ink-muted italic font-serif border-l-2 border-blood/40 pl-4 py-2 my-4">
+                                    {story.excerpt}
                                 </div>
-                            </Link>
-                        </article>
-                    );
-                })}
+                            </header>
+
+                            <div className="text-gold font-serif text-sm mt-6 uppercase tracking-widest font-bold flex items-center justify-start gap-2 group-hover:translate-x-2 transition-transform">
+                                Leer Crónica <span className="text-xl leading-none">→</span>
+                            </div>
+                        </Link>
+                    </article>
+                ))}
             </div>
 
             {/* Sidebar Content kept here for Home view */}
