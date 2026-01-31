@@ -44,7 +44,7 @@ export const stories = [
         )
     },
 {
-        id: 'chronicle-production-01',
+        id: 'chronicle-production-02',
         title: "Arrasa con lo que veas y generoso no seasr",
         date: "27 de Enero, 2026",
         excerpt: "Crónica de un despertar que nadie pidió",
