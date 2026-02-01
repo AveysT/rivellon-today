@@ -1,126 +1,159 @@
+// Data Source: Issues of the Newspaper
 const issues = [
     {
-        id: 1,
-        date: "November 19, 2025",
-        vol: "Vol. 1, No. 1",
+        id: 'issue-1',
+        vol: 'Expedition Day 1',
+        date: 'November 20, 2025',
         lead: {
-            tag: "Breaking News",
-            headline: "Dragon Spotted Near The Northern Peaks",
-            subhead: "Local villagers report smoke and tremors; King's Guard dispatched to investigate.",
-            author: "Sir Alistair Penwright",
-            body: `<p><span class="drop-cap">T</span>he quiet village of Oakhaven was thrown into chaos early this morning when a shadow, described by witnesses as "large enough to blot out the sun," passed over the market square. While skeptics claim it was merely a storm cloud, the scorched earth found near the northern ridge suggests otherwise.</p>
-                   <p>"I saw it with my own eyes," claimed Martha, a local baker. "Scales as red as rubies and eyes like burning coals. It took three of my best sheep!"</p>
-                   <p>The King's Guard has been alerted and a detachment is expected to arrive by sundown. Citizens are advised to stay indoors and keep water buckets handy.</p>`
+            headline: 'WESTGATE BREACHED!',
+            subhead: 'The Company of Dwarves enters the Mines of Moria once more.',
+            author: 'Gimli, Lockbearer',
+            tag: 'Expedition Update',
+            image: 'moria_gameplay.png', // Image for the lead story
+            body: `
+                <p><span class="drop-cap">A</span>t long last, the doors of Durin have opened to us! The air is stale, and the darkness is absolute, but the spirit of the company is high. We have established a forward camp in the first hall.</p>
+                <p>Lord Gimli struck the first blow against the rubble blocking our path, and with a mighty crash, the way was clear. "Baruk Khazâd!" he cried, and the echoes rang like thunder in the deep.</p>
+                <p>We have found traces of the old colony—broken tools, scattered armor—but no sign of the enemy yet. We must be cautious. The deep places of the world hold secrets that are best left undisturbed, but we are stubborn. We are Dwarves.</p>
+                <p>Tomorrow, we press on towards the Bridge of Khazad-dûm. May Aulë guide our pickaxes.</p>
+            `
         },
         sidebar: [
-            { type: 'weather', title: 'Weather', content: `<p><strong>Today:</strong> Overcast, chance of dragon fire.</p><p><strong>Tomorrow:</strong> Sunny with a high of 22°C.</p>` },
-            { type: 'wanted', title: 'WANTED', content: `<p class="wanted-name">"Slippery" Pete</p><p>For crimes against poultry.</p><p class="reward">Reward: 50 Silver</p>` }
+            { type: 'widget', title: 'Resource Watch', content: '<ul><li>Iron: High</li><li>Gold: Low</li><li>Ale: Critical</li></ul>' },
+            { type: 'wanted', name: 'Cave Troll', reward: '500 Gold' },
+            { type: 'widget', title: 'Rune of the Day', content: '<p style="font-size: 2rem; text-align: center;">ᚠ (Fehu) - Wealth</p>' }
         ],
         secondary: [
-            { title: "New Potion Shop Opens", content: "The \"Bubbling Cauldron\" offers discounts on healing salves this week." },
-            { title: "Tournament Announced", content: "Knights from across the realm gather for the Grand Melee next Sunday." },
-            { title: "Lost Cat", content: "Answers to \"Mr. Whiskers\". May be invisible. Please check your pockets." }
+            { title: 'Mithril Found?', excerpt: 'Rumors of a new vein near the lower deeps...' },
+            { title: 'Orc Patrols', excerpt: 'Scouts report movement in the shadows...' },
+            { title: 'Best Brews', excerpt: 'How to brew ale in the dark...' }
         ]
     },
     {
-        id: 2,
-        date: "November 20, 2025",
-        vol: "Vol. 1, No. 2",
+        id: 'issue-2',
+        vol: 'Expedition Day 5',
+        date: 'November 24, 2025',
         lead: {
-            tag: "Politics",
-            headline: "King Announces Tax on Magic Items",
-            subhead: "Wizards Guild threatens strike; potion prices expected to soar.",
-            author: "Lady Elara Vane",
-            body: `<p><span class="drop-cap">I</span>n a controversial move today, King Theobald III decreed a 15% tariff on all enchanted goods, citing the need to fund the repair of the Northern Watchtower.</p>
-                   <p>The Wizards Guild has formally protested, stating that this will unfairly impact the working-class mage. "We provide a service," said Grand Wizard Merlinus. "We shouldn't be taxed for our mana."</p>
-                   <p>Merchants are already hoarding wands and crystals in anticipation of the price hike.</p>`
+            headline: 'SHADOW IN THE DEEP',
+            subhead: 'Strange noises heard from the lower levels.',
+            author: 'Balin (Spirit)',
+            tag: 'Warning',
+            body: `
+                <p><span class="drop-cap">D</span>rums. We hear drums in the deep. They are coming.</p>
+                <p>The excavation of the Third Hall has been halted. The miners report a feeling of dread that cannot be explained by mere darkness. Torches flicker and die without wind.</p>
+                <p>We have doubled the guard. If there is something down there, we will be ready for it. We did not come this far to be frightened by ghosts.</p>
+            `
         },
         sidebar: [
-            { type: 'weather', title: 'Weather', content: `<p><strong>Today:</strong> Clear skies, perfect for flying.</p><p><strong>Tomorrow:</strong> Heavy rain expected in the capital.</p>` },
-            { type: 'ad', title: 'For Sale', content: `<p>Used Flying Carpet. Slight moth damage. 200 Gold. Ask for Aladdin.</p>` }
+            { type: 'widget', title: 'Casualties', content: 'None (Yet)' },
+            { type: 'wanted', name: 'Goblin King', reward: '1000 Gold' }
         ],
         secondary: [
-            { title: "Goblin Strike Ends", content: "The miners have returned to work after securing better pickaxes." },
-            { title: "Mystery Lights", content: "Strange lights seen over the swamp. Probably just swamp gas." },
-            { title: "Recipe Corner", content: "How to cook a cockatrice without turning to stone." }
+            { title: 'Lost Pickaxe', excerpt: 'Reward for return of masterwork tool...' },
+            { title: 'Mushroom Stew', excerpt: 'A delicacy of the deep...' },
+            { title: 'Echoes', excerpt: 'Are the walls speaking to us?' }
         ]
     }
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-    const issueList = document.getElementById('issue-list');
+// DOM Elements
+const issueList = document.getElementById('issue-list');
+const paperVol = document.getElementById('paper-vol');
+const paperDate = document.getElementById('paper-date');
+const leadTag = document.getElementById('lead-tag');
+const leadHeadline = document.getElementById('lead-headline');
+const leadSubhead = document.getElementById('lead-subhead');
+const leadAuthor = document.getElementById('lead-author');
+const leadBody = document.getElementById('lead-body');
+const leadMedia = document.getElementById('lead-media'); // New media container
+const sidebarContent = document.getElementById('sidebar-content');
+const secondaryStories = document.getElementById('secondary-stories');
 
-    // Render Newsstand
-    issues.forEach(issue => {
-        const item = document.createElement('div');
-        item.className = 'issue-preview';
-        item.dataset.id = issue.id;
-        item.innerHTML = `
-            <div class="preview-header">
-                <span class="preview-date">${issue.date}</span>
-            </div>
+// Initialize Newsstand
+function initNewsstand() {
+    issues.forEach((issue, index) => {
+        const preview = document.createElement('div');
+        preview.classList.add('issue-preview');
+        if (index === 0) preview.classList.add('active');
+
+        preview.innerHTML = `
+            <span class="preview-date">${issue.date}</span>
             <div class="preview-headline">${issue.lead.headline}</div>
         `;
-        item.addEventListener('click', () => loadIssue(issue.id));
-        issueList.appendChild(item);
+
+        preview.addEventListener('click', () => {
+            // Remove active class from all
+            document.querySelectorAll('.issue-preview').forEach(el => el.classList.remove('active'));
+            // Add active class to clicked
+            preview.classList.add('active');
+            // Load content
+            loadIssue(issue);
+        });
+
+        issueList.appendChild(preview);
     });
 
-    // Load latest issue by default
-    loadIssue(issues[0].id);
-});
+    // Load first issue by default
+    loadIssue(issues[0]);
+}
 
-function loadIssue(id) {
-    const issue = issues.find(i => i.id === id);
-    if (!issue) return;
+// Load Issue Content
+function loadIssue(issue) {
+    // Update Header
+    paperVol.textContent = issue.vol;
+    paperDate.textContent = issue.date;
 
-    // Update Active State in Newsstand
-    document.querySelectorAll('.issue-preview').forEach(el => {
-        el.classList.remove('active');
-        if (parseInt(el.dataset.id) === id) {
-            el.classList.add('active');
-        }
-    });
+    // Update Lead Story
+    leadTag.textContent = issue.lead.tag;
+    leadHeadline.textContent = issue.lead.headline;
+    leadSubhead.textContent = issue.lead.subhead;
+    leadAuthor.textContent = issue.lead.author;
+    leadBody.innerHTML = issue.lead.body;
 
-    // Update Paper Content
-    document.getElementById('paper-vol').textContent = issue.vol;
-    document.getElementById('paper-date').textContent = issue.date;
-
-    document.getElementById('lead-tag').textContent = issue.lead.tag;
-    document.getElementById('lead-headline').textContent = issue.lead.headline;
-    document.getElementById('lead-subhead').textContent = issue.lead.subhead;
-    document.getElementById('lead-author').textContent = issue.lead.author;
-    document.getElementById('lead-body').innerHTML = issue.lead.body;
+    // Handle Media (Image/Video)
+    leadMedia.innerHTML = ''; // Clear previous media
+    if (issue.lead.image) {
+        const img = document.createElement('img');
+        img.src = issue.lead.image;
+        img.alt = "Gameplay Screenshot";
+        leadMedia.appendChild(img);
+        leadMedia.style.display = 'block';
+    } else {
+        leadMedia.style.display = 'none';
+    }
 
     // Update Sidebar
-    const sidebar = document.getElementById('sidebar-content');
-    sidebar.innerHTML = '';
+    sidebarContent.innerHTML = '';
     issue.sidebar.forEach(widget => {
-        const div = document.createElement('div');
-        div.className = `widget ${widget.type}-widget`;
-        div.innerHTML = `<h3>${widget.title}</h3><div class="widget-content">${widget.content}</div>`;
+        const widgetDiv = document.createElement('div');
         if (widget.type === 'wanted') {
-            div.className += ' wanted-poster'; // Re-apply special class
-            // Fix structure for wanted poster to match CSS if needed, or adjust CSS. 
-            // The current CSS expects specific structure for wanted poster.
-            // Let's just dump content for now as it contains the structure.
-            div.innerHTML = `<h3>${widget.title}</h3>${widget.content}`;
+            widgetDiv.classList.add('widget', 'wanted-poster');
+            widgetDiv.innerHTML = `
+                <h3>WANTED</h3>
+                <div class="wanted-name">${widget.name}</div>
+                <div class="reward">REWARD: ${widget.reward}</div>
+            `;
+        } else {
+            widgetDiv.classList.add('widget');
+            widgetDiv.innerHTML = `
+                <h3>${widget.title}</h3>
+                <div>${widget.content}</div>
+            `;
         }
-        sidebar.appendChild(div);
-
-        const hr = document.createElement('hr');
-        hr.className = 'divider';
-        sidebar.appendChild(hr);
+        sidebarContent.appendChild(widgetDiv);
     });
-    // Remove last divider
-    if (sidebar.lastChild) sidebar.removeChild(sidebar.lastChild);
 
     // Update Secondary Stories
-    const secondary = document.getElementById('secondary-stories');
-    secondary.innerHTML = '';
+    secondaryStories.innerHTML = '';
     issue.secondary.forEach(story => {
-        const article = document.createElement('article');
-        article.className = 'story-card';
-        article.innerHTML = `<h3>${story.title}</h3><p>${story.content}</p>`;
-        secondary.appendChild(article);
+        const storyDiv = document.createElement('div');
+        storyDiv.classList.add('story-card');
+        storyDiv.innerHTML = `
+            <h3>${story.title}</h3>
+            <p>${story.excerpt}</p>
+        `;
+        secondaryStories.appendChild(storyDiv);
     });
 }
+
+// Start the app
+initNewsstand();
