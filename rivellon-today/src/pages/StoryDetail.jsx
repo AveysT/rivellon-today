@@ -35,14 +35,22 @@ export const StoryDetail = () => {
 
             {story.video && (
                 <div className="mb-8 p-1 border-y border-gold-dark/30 bg-black/20">
-                    <video
-                        src={story.video}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full max-w-4xl mx-auto h-auto object-cover shadow-2xl rounded-sm"
-                    />
+                    {story.video.endsWith('.webp') ? (
+                        <img
+                            src={story.video}
+                            alt={story.title}
+                            className="w-full max-w-4xl mx-auto h-auto object-cover shadow-2xl rounded-sm"
+                        />
+                    ) : (
+                        <video
+                            src={story.video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full max-w-4xl mx-auto h-auto object-cover shadow-2xl rounded-sm"
+                        />
+                    )}
                 </div>
             )}
 

@@ -51,14 +51,22 @@ export const Edition = () => {
                         <Link to={`/story/${story.id}`} className="block">
                             <header className="mb-4">
                                 {story.video && (
-                                    <video
-                                        src={story.video}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-auto object-cover mb-6 rounded border border-gold-dark/30 shadow-md grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-                                    />
+                                    story.video.endsWith('.webp') ? (
+                                        <img
+                                            src={story.video}
+                                            alt={story.title}
+                                            className="w-full h-auto object-cover mb-6 rounded border border-gold-dark/30 shadow-md grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                                        />
+                                    ) : (
+                                        <video
+                                            src={story.video}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="w-full h-auto object-cover mb-6 rounded border border-gold-dark/30 shadow-md grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                                        />
+                                    )
                                 )}
                                 <div className="flex items-center gap-2 text-blood-bright text-xs font-bold uppercase tracking-wider mb-2 font-serif">
                                     <Feather className="w-3 h-3" />
