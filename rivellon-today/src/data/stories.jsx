@@ -132,7 +132,7 @@ export const stories = [
     {
         id: 'chronicle-production-04',
         title: "Arrasa con lo que veas y generoso no seas",
-        date: "03 de Febrero, 2026",
+        date: "27 de Enero, 2026",
         excerpt: "Puertas que sería mejor dejar cerradas",
         video: `${import.meta.env.BASE_URL}videos/04.webp`,
         content: (
@@ -340,6 +340,47 @@ export const stories = [
         date: "03 de Febrero, 2026",
         excerpt: "Puertas que sería mejor dejar cerradas",
         video: `${import.meta.env.BASE_URL}videos/09.webp`,
+        content: (
+            <>
+                <p>
+                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
+                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
+                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
+                </p>
+                <p>
+                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
+                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
+                </p>
+                <p>
+                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
+                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
+                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
+                </p>
+                <p>
+                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
+                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
+                </p>
+                <p>
+                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
+                    pero la puerta acabó cediendo.
+                </p>
+                <p>
+                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
+                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
+                </p>
+                <p>
+                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
+                </p>
+
+            </>
+        )
+    },
+    {
+        id: 'chronicle-production-10',
+        title: "Arrasa con lo que veas y generoso no seas",
+        date: "03 de Febrero, 2026",
+        excerpt: "Puertas que sería mejor dejar cerradas",
+        video: `${import.meta.env.BASE_URL}videos/10.webp`,
         content: (
             <>
                 <p>
