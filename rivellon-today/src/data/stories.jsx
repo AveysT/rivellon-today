@@ -1,12 +1,14 @@
 import React from 'react';
 
 export const stories = [
+    // --- ENERO 27 ---
     {
         id: 'chronicle-production-01',
+        type: 'news',
         title: "Ni duermen ni dejan dormir",
         date: "27 de Enero, 2026",
         excerpt: "Crónica de un despertar que nadie pidió",
-        video: `${import.meta.env.BASE_URL}videos/01.webp`,
+        video: `${import.meta.env.BASE_URL}videos/Enero/27012026/Noticias/01.webp`,
         content: (
             <>
                 <p>
@@ -45,10 +47,11 @@ export const stories = [
     },
     {
         id: 'chronicle-production-02',
+        type: 'news',
         title: "Arrasa con lo que veas y generoso no seas",
         date: "27 de Enero, 2026",
         excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/02.webp`,
+        video: `${import.meta.env.BASE_URL}videos/Enero/27012026/Noticias/02.webp`,
         content: (
             <>
                 <p>
@@ -86,10 +89,11 @@ export const stories = [
     },
     {
         id: 'chronicle-production-03',
+        type: 'news',
         title: "¿Inflamable significa flamable?",
         date: "27 de Enero, 2026",
         excerpt: "Cuando el PvP academico se resuelve a base de PUM",
-        video: `${import.meta.env.BASE_URL}videos/03.webp`,
+        video: `${import.meta.env.BASE_URL}videos/Enero/27012026/Noticias/03.webp`,
         content: (
             <>
                 <p>
@@ -129,291 +133,149 @@ export const stories = [
             </>
         )
     },
+    // Headline for Jan 27
+    {
+        id: 'headline-jan27-01',
+        type: 'headline',
+        title: "TÍTULO 1", // Generic title
+        date: "27 de Enero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Enero/27012026/Titulares/01.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Enero/27012026/Titulares/01_thumb.jpg`,
+        content: null // Headlines don't have full content for now
+    },
+
+    // --- FEBRERO 03 ---
     {
         id: 'chronicle-production-04',
-        title: "Arrasa con lo que veas y generoso no seas",
-        date: "27 de Enero, 2026",
-        excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/04.webp`,
+        type: 'news',
+        title: "TÍTULO NOTICIA 1 - FEB 03", // Placeholder title
+        date: "03 de Febrero, 2026",
+        excerpt: "Escribir aquí un resumen corto e impactante de la noticia...",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Noticias/01.webp`,
         content: (
             <>
                 <p>
-                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
-                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
-                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
+                    [Escribir aquí el contenido completo de la noticia. Puedes usar varias etiquetas &lt;p&gt; para separar párrafos.]
                 </p>
                 <p>
-                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
-                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
+                    [Seguiremos informando...]
                 </p>
-                <p>
-                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
-                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
-                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
-                </p>
-                <p>
-                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
-                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
-                </p>
-                <p>
-                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
-                    pero la puerta acabó cediendo.
-                </p>
-                <p>
-                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
-                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
-                </p>
-                <p>
-                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
-                </p>
-
             </>
         )
     },
     {
         id: 'chronicle-production-05',
-        title: "Arrasa con lo que veas y generoso no seas",
+        type: 'news',
+        title: "TÍTULO NOTICIA 2 - FEB 03", // Placeholder title
         date: "03 de Febrero, 2026",
-        excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/05.webp`,
+        excerpt: "Escribir aquí un resumen corto e impactante de la noticia...",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Noticias/02.webp`,
         content: (
             <>
                 <p>
-                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
-                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
-                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
+                    [Escribir aquí el contenido completo de la noticia. Puedes usar varias etiquetas &lt;p&gt; para separar párrafos.]
                 </p>
-                <p>
-                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
-                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
-                </p>
-                <p>
-                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
-                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
-                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
-                </p>
-                <p>
-                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
-                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
-                </p>
-                <p>
-                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
-                    pero la puerta acabó cediendo.
-                </p>
-                <p>
-                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
-                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
-                </p>
-                <p>
-                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
-                </p>
+            </>
+        )
+    },
+    // Headlines for Feb 03
+    {
+        id: 'headline-feb03-01',
+        type: 'headline',
+        title: "TITULAR 1",
+        date: "03 de Febrero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/01.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/01_thumb.jpg`,
+        content: null
+    },
+    {
+        id: 'headline-feb03-02',
+        type: 'headline',
+        title: "TITULAR 2",
+        date: "03 de Febrero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/02.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/02_thumb.jpg`,
+        content: null
+    },
+    {
+        id: 'headline-feb03-03',
+        type: 'headline',
+        title: "TITULAR 3",
+        date: "03 de Febrero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/03.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/03_thumb.jpg`,
+        content: null
+    },
+    {
+        id: 'headline-feb03-04',
+        type: 'headline',
+        title: "TITULAR 4",
+        date: "03 de Febrero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/04.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Febrero/03022026/Titulares/04_thumb.jpg`,
+        content: null
+    },
 
+    // --- FEBRERO 10 ---
+    {
+        id: 'chronicle-production-11',
+        type: 'news',
+        title: "TÍTULO NOTICIA 1 - FEB 10",
+        date: "10 de Febrero, 2026",
+        excerpt: "Escribir aquí un resumen corto e impactante de la noticia...",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Noticias/01.webp`,
+        content: (
+            <>
+                <p>
+                    [Escribir aquí el contenido completo de la noticia. Puedes usar varias etiquetas &lt;p&gt; para separar párrafos.]
+                </p>
+                <p>
+                    [Añadir más detalles sobre lo ocurrido durante la sesión...]
+                </p>
             </>
         )
     },
     {
-        id: 'chronicle-production-06',
-        title: "Arrasa con lo que veas y generoso no seas",
-        date: "03 de Febrero, 2026",
-        excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/06.webp`,
+        id: 'chronicle-production-12',
+        type: 'news',
+        title: "TÍTULO NOTICIA 2 - FEB 10",
+        date: "10 de Febrero, 2026",
+        excerpt: "Escribir aquí un resumen corto e impactante de la noticia...",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Noticias/02.webp`,
         content: (
             <>
                 <p>
-                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
-                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
-                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
+                    [Escribir aquí el contenido completo de la noticia. Puedes usar varias etiquetas &lt;p&gt; para separar párrafos.]
                 </p>
-                <p>
-                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
-                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
-                </p>
-                <p>
-                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
-                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
-                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
-                </p>
-                <p>
-                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
-                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
-                </p>
-                <p>
-                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
-                    pero la puerta acabó cediendo.
-                </p>
-                <p>
-                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
-                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
-                </p>
-                <p>
-                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
-                </p>
-
             </>
         )
     },
+    // Headlines for Feb 10
     {
-        id: 'chronicle-production-07',
-        title: "Arrasa con lo que veas y generoso no seas",
-        date: "03 de Febrero, 2026",
-        excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/07.webp`,
-        content: (
-            <>
-                <p>
-                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
-                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
-                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
-                </p>
-                <p>
-                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
-                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
-                </p>
-                <p>
-                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
-                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
-                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
-                </p>
-                <p>
-                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
-                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
-                </p>
-                <p>
-                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
-                    pero la puerta acabó cediendo.
-                </p>
-                <p>
-                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
-                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
-                </p>
-                <p>
-                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
-                </p>
-
-            </>
-        )
+        id: 'headline-feb10-01',
+        type: 'headline',
+        title: "TITULAR 1",
+        date: "10 de Febrero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Titulares/01.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Titulares/01_thumb.jpg`,
+        content: null
     },
     {
-        id: 'chronicle-production-08',
-        title: "Arrasa con lo que veas y generoso no seas",
-        date: "03 de Febrero, 2026",
-        excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/08.webp`,
-        content: (
-            <>
-                <p>
-                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
-                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
-                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
-                </p>
-                <p>
-                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
-                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
-                </p>
-                <p>
-                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
-                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
-                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
-                </p>
-                <p>
-                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
-                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
-                </p>
-                <p>
-                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
-                    pero la puerta acabó cediendo.
-                </p>
-                <p>
-                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
-                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
-                </p>
-                <p>
-                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
-                </p>
-
-            </>
-        )
+        id: 'headline-feb10-02',
+        type: 'headline',
+        title: "TITULAR 2",
+        date: "10 de Febrero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Titulares/02.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Titulares/02_thumb.jpg`,
+        content: null
     },
     {
-        id: 'chronicle-production-09',
-        title: "Arrasa con lo que veas y generoso no seas",
-        date: "03 de Febrero, 2026",
-        excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/09.webp`,
-        content: (
-            <>
-                <p>
-                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
-                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
-                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
-                </p>
-                <p>
-                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
-                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
-                </p>
-                <p>
-                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
-                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
-                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
-                </p>
-                <p>
-                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
-                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
-                </p>
-                <p>
-                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
-                    pero la puerta acabó cediendo.
-                </p>
-                <p>
-                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
-                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
-                </p>
-                <p>
-                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
-                </p>
-
-            </>
-        )
-    },
-    {
-        id: 'chronicle-production-10',
-        title: "Arrasa con lo que veas y generoso no seas",
-        date: "03 de Febrero, 2026",
-        excerpt: "Puertas que sería mejor dejar cerradas",
-        video: `${import.meta.env.BASE_URL}videos/10.webp`,
-        content: (
-            <>
-                <p>
-                    Nuestro grupo de héroes, todavía algo moribundos pero con fuerzas suficientes para meterse en líos,
-                    se dirigió sin demasiada sutileza al resto del sótano del inexplorado, donde se estaba montando una escandalera de órdago.
-                    El objetivo: obtener respuestas sobre su estado actual. El método: avanzar como pitbulls persiguiendo a un conejo.
-                </p>
-                <p>
-                    Durante el trayecto aprovecharon para mangar todo lo que parecía mínimamente valioso: pociones,
-                    cacerolas… ¿el cuádriceps de un enano? Nadie preguntó, olía decente.
-                </p>
-                <p>
-                    Al asomarse a la parte central del nivel inferior se encontraron con un panorama digno de pesadilla:
-                    harapientos sacados de un mal sueño lovecraftiano, un lagarto rojo que decía ser príncipe de no-sé-dónde,
-                    un enano un poco cabrón y hasta un esqueleto filósofo. Ante semejante fauna, el trío calavera decidió, por una vez, pasar inadvertido.
-                </p>
-                <p>
-                    Entre ellos y su destino apareció el enemigo definitivo de todo metomentodo: una puerta. De roble. Con 400 PS.
-                    La decisión fue clara: dos horas golpeándola, porque buscar una llave era impensable.
-                </p>
-                <p>
-                    La victoria tuvo coste. El Lechero perdió su cuchillo oxidado y Tibia y Peroné dejaron por el camino algunas falanges y rótulas,
-                    pero la puerta acabó cediendo.
-                </p>
-                <p>
-                    Tras ella les aguardaba una escena inesperada: magos bien vestidos, con túnicas rojas, acorralando a varios presos con collares de perro.
-                    Y entre ellos, alguien llamó especialmente la atención de Tibia.
-                </p>
-                <p>
-                    Una vieja conocida...Una bruja. Y por su mirada, quedaba claro que estaba dispuesta a arrasar con todo lo que viera… y a no ser nada generosa.
-                </p>
-
-            </>
-        )
+        id: 'headline-feb10-03',
+        type: 'headline',
+        title: "TITULAR 3",
+        date: "10 de Febrero, 2026",
+        video: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Titulares/03.webp`,
+        thumbnail: `${import.meta.env.BASE_URL}videos/Febrero/10022026/Titulares/03_thumb.jpg`,
+        content: null
     }
 ];
