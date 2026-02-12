@@ -103,7 +103,7 @@ export const Edition = () => {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                             {headlineStories.map((story) => (
-                                <article key={story.id} className="group relative bg-black/20 p-3 rounded hover:bg-black/40 border border-transparent hover:border-gold-dark/30 transition-all flex flex-col">
+                                <article key={story.id} className="group relative bg-black/20 p-3 rounded hover:bg-black/40 border border-transparent hover:border-gold-dark/30 transition-all flex flex-col hover:animate-jiggle">
                                     <Link to={`/story/${story.id}`} className="block h-full flex flex-col">
                                         <div className="relative w-full aspect-video mb-3 rounded border border-white/10 shadow-sm overflow-hidden">
                                             {/* Base Media (Video/WebP) - Always rendered, stays underneath */}

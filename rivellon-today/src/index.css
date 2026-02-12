@@ -1,14 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+@import "tailwind-animations";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --font-serif: "Cinzel", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-handwriting: "Dancing Script", cursive;
+
+  --color-rivellon-bg: #0a0a0a;
+  --color-rivellon-panel: #161313;
+  --color-rivellon-paper: #e0d2b4;
+
+  --color-ink: #e0d2b4;
+  --color-ink-muted: #8a8a8a;
+
+  --color-blood: #8a1c1c;
+  --color-blood-bright: #b92b2b;
+
+  --color-gold: #c8aa6e;
+  --color-gold-light: #e6cfa3;
+  --color-gold-dark: #8a6c3c;
+  --color-gold-metallic: #9d7d40;
+
+  --background-image-paper-texture: url('/paper-texture.jpg');
+}
 
 @layer base {
   body {
     @apply bg-rivellon-bg text-ink antialiased font-serif;
     /* Fallback if image not loaded, or use a noise texture */
-    background-image: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
   }
 
   h1,
